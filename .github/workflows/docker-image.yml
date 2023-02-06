@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  push:
+    tags: [ 'b*.*.*' ]
+    branches: [ "release" ]
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag TeXLiveCI:$(date +%s)
+      
