@@ -28,8 +28,7 @@ name: Build Docker image
 
 on:
   push:
-    tags: [ 'b*.*.*' ]
-    tags: [ 'v*.*.*' ]
+    tags: [ 'b*.*.*' , 'v*']
     branches: [ "release" ]
 # on:
 #   workflow_dispatch:
