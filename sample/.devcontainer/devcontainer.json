@@ -1,0 +1,33 @@
+{
+	"name": "TexLive22",
+	"image": "pzktit/texlive:2022",
+	// Add the IDs of extensions you want installed when the container is created.
+	"customizations": {
+	  "vscode": {
+      "extensions": [
+				"james-yu.latex-workshop",
+				"valentjn.vscode-ltex"
+      ],
+			"settings": {
+				// General settings
+				"files.eol": "\n",
+				"editor.formatOnSave": true,
+				"files.associations": {
+					"*.tex": "latex"
+				},
+				// Latex settings
+				"latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+				// Language settings
+				// "ltex.language": "pl-PL",
+				"ltex.language": "en-US"
+			}		
+    }
+  },
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "uname -a",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"runArgs": ["--rm", "--name=texlive22-sample"]
+}
