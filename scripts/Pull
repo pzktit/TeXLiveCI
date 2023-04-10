@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker run --rm -ti --name=texliveci ghcr.io/pzktit/texliveci
+docker pull ghcr.io/pzktit/texliveci
 #docker run --rm -ti --name=ubuntu pzktit/texlive:2022
