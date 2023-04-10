@@ -1,6 +1,6 @@
 {
-	"name": "TexLive22",
-	"image": "pzktit/texlive:2022",
+	"name": "TexLive23",
+	"image": "pzktit/texlive:2023",
 	// Add the IDs of extensions you want installed when the container is created.
 	"customizations": {
 	  "vscode": {
@@ -29,5 +29,5 @@
 	"postCreateCommand": "uname -a",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
-	"runArgs": ["--rm", "--name=texlive22-sample"]
+	"runArgs": ["--rm", "--name=texlive23-sample"]
 }
