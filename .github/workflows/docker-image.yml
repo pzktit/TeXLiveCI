@@ -30,8 +30,7 @@ on:
   push:
     tags: [ 'b*.*.*' , 'v*']
     branches: [ "release" ]
-# on:
-#   workflow_dispatch:
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
